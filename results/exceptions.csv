@@ -1,0 +1,6 @@
+Order_ID,Issue,Field,Source_Value,Target_Value
+ORD014,Duplicate in target,All,N/A,Duplicate Record
+ORD004,Order_Status mismatch,Order_Status,Pending,Completed
+ORD009,Order_Amount mismatch,Order_Amount,1280.00,1350.00
+ORD015,Missing in target,Order_ID,ORD015,Missing
+ORD016,Missing in source / Unexpected,Order_ID,Missing,ORD016
