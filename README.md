@@ -1,3 +1,23 @@
+# Enterprise System Data Reconciliation Playbook
+
+A production-style data validation pipeline designed to audit and verify data migrations between source and target systems (e.g., e-commerce order synchronization). 
+
+This repository demonstrates a progressive architecture—evolving from basic flat-file script logic (**Version 1**) to an enterprise-grade relational database implementation using SQL (**Version 2**).
+
+---
+
+## 🏗️ Architectural Evolution
+
+```text
+  Version 1 (Flat-File Engine)           Version 2 (SQLite + SQL Engine)
+  
+  [ source_orders.csv ]                  [ source_orders.csv ] ──┐
+          │                                                      ▼
+    Python DictReader                      [ reconciliation.db ] (SQLite)
+          │                                      │
+  [ target_orders.csv ]                  [ SQL Queries (JOINs) ] ──► [ exceptions.csv ]
+
+
 # System-to-System Data Reconciliation Engine
 
 A lightweight data validation tool that identifies discrepancies between source and target data systems during migrations and ETL syncs.
